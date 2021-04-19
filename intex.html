@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="addForm">
+          <header>Add Form</header>
+          <div class="input">
+            <label for="start">Full Name:</label>
+            <input type="text" placeholder="Name" id="name" />
+          </div>
+          <div class="input">
+            <label for="start">BirthDade:</label>
+            <input
+              type="date"
+              id="date"
+              name="trip-start"
+              min="1980-01-01"
+              max="2000-01-01"
+            />
+          </div>
+          <div class="input">
+            <label for="start">School:</label>
+            <select name="schools" id="school">
+              <!-- <option value="School"></option> -->
+            </select>
+          </div>
+          <div class="input">
+            <label for="start">ID:</label>
+            <input type="text" placeholder="National ID" id="nationalId" />
+          </div>
+          <button id="add" onclick="insRow()" class="addButton">Add</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="table">
+      <div class="container">
+        <table id="TaBle">
+          <tr>
+            <th class="header">I</th>
+            <th class="header">Name</th>
+            <th class="header">Birthdate</th>
+            <th class="header">School</th>
+            <th class="header">ID</th>
+            <th class="header">Action</th>
+          </tr>
+          <tr>
+            <td class="cell">0</td>
+            <td class="cell">ghazy</td>
+            <td class="cell">1993-07-26</td>
+            <td class="cell">school 3</td>
+            <td class="cell">2536</td>
+            <td class="cell">
+              <a href="#" onclick="editRow(this)"> edit </a>
+              <a href="#" onclick="deleteRow(this)"> Delete</a>
+            </td>
+          </tr>
+        </table>
+        <div class="style">
+          <label for="start">head style:</label>
+          <button class="button" onclick='changeColor("#4CAF50","#fff")'>
+            Green
+          </button>
+          <button
+            class="button button2"
+            onclick='changeColor("#008CBA","#fff")'
+          >
+            Blue
+          </button>
+          <button
+            class="button button3"
+            onclick='changeColor("#f44336","#fff")'
+          >
+            Red
+          </button>
+          <button
+            class="button button5"
+            onclick='changeColor("#555555","#fff")'
+          >
+            Black
+          </button>
+          <button
+            class="button button4"
+            onclick='changeColor("#e7e7e7","#000")'
+          >
+            Gray
+          </button>
+        </div>
+        <div class="style">
+          <label for="start">cells style:</label>
+
+          <button class="button" onclick='changeCellColor("#4CAF50","#fff")'>
+            Green
+          </button>
+          <button
+            class="button button2"
+            onclick='changeCellColor("#008CBA","#fff")'
+          >
+            Blue
+          </button>
+          <button
+            class="button button3"
+            onclick='changeCellColor("#f44336","#fff")'
+          >
+            Red
+          </button>
+          <button
+            class="button button5"
+            onclick='changeCellColor("#555555","#fff")'
+          >
+            Black
+          </button>
+          <button
+            class="button button4"
+            onclick='changeCellColor("#e7e7e7","#000")'
+          >
+            Gray
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
